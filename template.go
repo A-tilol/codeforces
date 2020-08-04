@@ -2,17 +2,21 @@ package main
 
 import (
 	"bufio"
-	"fmt"
 	"io"
 	"log"
 	"os"
 	"strconv"
 )
 
-func main() {
-	n := readInt()
+func solve() {
 
-	fmt.Println(n)
+}
+
+func main() {
+	k := readInt()
+	for i := 0; i < k; i++ {
+		solve()
+	}
 }
 
 var (
