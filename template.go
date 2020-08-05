@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"io"
 	"log"
+	"math"
 	"os"
 	"strconv"
 )
@@ -31,7 +32,7 @@ func init() {
 
 func newReadString(ior io.Reader) (func() string, func() []byte) {
 	r := bufio.NewScanner(ior)
-	r.Buffer(make([]byte, 1024), int(1e+11))
+	r.Buffer(make([]byte, 1024), math.MaxInt32)
 	r.Split(bufio.ScanWords)
 
 	f1 := func() string {
